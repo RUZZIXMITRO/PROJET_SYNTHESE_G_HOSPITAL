@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Messages</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4 h-screen">
+        <!-- Chat Area -->
+        <div class="bg-white rounded-lg shadow-md flex flex-col h-full">
+            <!-- Chat Header -->
+            <div class="p-4 border-b flex justify-between items-center">
+                <h1 class="text-xl font-semibold">Student Messages</h1>
+                <div class="text-blue-500">Welcome, <span id="userName">Student</span></div>
+            </div>
+            
+            <!-- Messages Area -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-gray-50">
+                <!-- Messages will be inserted here by JavaScript -->
+            </div>
+            
+            <!-- Message Input -->
+            <form action="get_messages.php" method="post">
+                <div class="p-4 border-t bg-white">
+                    <div class="flex space-x-2">
+                        <input type="text" 
+                            name="message"
+                            id="message-input" 
+                            class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                            placeholder="Type your message..." 
+                            required>
+                        <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/chat.js"></script>
+</body>
+</html>

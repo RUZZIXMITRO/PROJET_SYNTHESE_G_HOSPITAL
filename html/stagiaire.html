@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+  <head>
+    <title>Login Stagiaire</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body class="login-page stagiaire-bg">
+    <nav>
+      <a href="index.html">Retour</a>
+    </nav>
+    <div class="login-page-container">
+      <form class="login-form active"  method="post" action="../login.php">
+        <h2 class="form-title"><i class="fas fa-user-md"></i> Connexion Stagiaire</h2>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="Votre email" name="login">
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" required placeholder="Votre mot de passe" name="password">
+        </div>
+        <button type="submit" class="submit-btn">Se connecter</button>
+      </form>
+    </div>
+  </body>
+</html>
